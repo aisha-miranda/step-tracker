@@ -34,4 +34,13 @@ public class StepTracker {
         MonthData monthData = monthToData[monthNumber-1];
         monthData.days[dayNumber-1] = stepNumber;
     }
+
+    void changeStepGoal(){
+        int newStepGoal = scanner.nextInt();
+        if ((newStepGoal<0) || (newStepGoal ==0)){
+            System.out.println("Количество шагов должно быть положительным числом.");
+            return;
+        }
+        goalByStepsPerDay = newStepGoal;
+    }
 }
